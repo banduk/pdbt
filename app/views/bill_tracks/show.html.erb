@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Bill:</b>
+  <%= @bill_track.bill.title %>
+</p>
+
+<p>
+  <b>Pay date:</b>
+  <%= @bill_track.pay_date %>
+</p>
+
+<p>
+  <b>Observation:</b>
+  <%= @bill_track.observation %>
+</p>
+
+
+<%= link_to 'Edit', edit_bill_track_path(@bill_track) %> |
+<%= link_to 'Back', bill_tracks_path %>

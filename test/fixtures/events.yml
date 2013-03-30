@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  event_type: 
+  description: MyText
+  testimonial: MyText
+  report: MyText
+  date: 2013-03-30
+
+two:
+  event_type: 
+  description: MyText
+  testimonial: MyText
+  report: MyText
+  date: 2013-03-30

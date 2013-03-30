@@ -1,0 +1,29 @@
+<%= form_for(@bill_track) do |f| %>
+  <% if @bill_track.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bill_track.errors.count, "error") %> prohibited this bill_track from being saved:</h2>
+
+      <ul>
+      <% @bill_track.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bill %><br />
+    <%= f.select(:bill_id, @bills.map{|u| [u.title,u.id]}) %>
+  </div>
+  <div class="field">
+    <%= f.label :pay_date %><br />
+    <%= f.date_select :pay_date %>
+  </div>
+  <div class="field">
+    <%= f.label :observation %><br />
+    <%= f.text_area :observation %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

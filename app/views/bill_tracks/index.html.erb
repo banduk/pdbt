@@ -1,0 +1,27 @@
+<h1>Listing bill_tracks</h1>
+
+<table>
+  <tr>
+    <th>Bill</th>
+    <th>Pay date</th>
+    <th>Observation</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bill_tracks.each do |bill_track| %>
+  <tr>
+    <td><%= bill_track.bill.title %></td>
+    <td><%= bill_track.pay_date %></td>
+    <td><%= bill_track.observation %></td>
+    <td><%= link_to 'Show', bill_track %></td>
+    <td><%= link_to 'Edit', edit_bill_track_path(bill_track) %></td>
+    <td><%= link_to 'Destroy', bill_track, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bill track', new_bill_track_path %>

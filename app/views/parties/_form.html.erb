@@ -1,0 +1,37 @@
+<%= form_for(@party) do |f| %>
+  <% if @party.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@party.errors.count, "error") %> prohibited this party from being saved:</h2>
+
+      <ul>
+      <% @party.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :event %><br />
+    <%= f.text_field :event %>
+  </div>
+  <div class="field">
+    <%= f.label :flyer %><br />
+    <%= f.text_field :flyer %>
+  </div>
+  <div class="field">
+    <%= f.label :paying_audience %><br />
+    <%= f.number_field :paying_audience %>
+  </div>
+  <div class="field">
+    <%= f.label :gross_profit %><br />
+    <%= f.text_field :gross_profit %>
+  </div>
+  <div class="field">
+    <%= f.label :net_profit %><br />
+    <%= f.text_field :net_profit %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

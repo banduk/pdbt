@@ -1,0 +1,27 @@
+<h1>Listing pay_sheets</h1>
+
+<table>
+  <tr>
+    <th>Amount</th>
+    <th>Date</th>
+    <th>Observation</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pay_sheets.each do |pay_sheet| %>
+  <tr>
+    <td><%= pay_sheet.amount %></td>
+    <td><%= pay_sheet.date %></td>
+    <td><%= pay_sheet.observation %></td>
+    <td><%= link_to 'Show', pay_sheet %></td>
+    <td><%= link_to 'Edit', edit_pay_sheet_path(pay_sheet) %></td>
+    <td><%= link_to 'Destroy', pay_sheet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pay sheet', new_pay_sheet_path %>

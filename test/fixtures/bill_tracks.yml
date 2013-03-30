@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  bill: 
+  pay_date: 2013-03-30
+  observation: MyText
+
+two:
+  bill: 
+  pay_date: 2013-03-30
+  observation: MyText

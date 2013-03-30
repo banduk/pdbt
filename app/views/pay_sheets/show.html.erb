@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Amount:</b>
+  <%= @pay_sheet.amount %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @pay_sheet.date %>
+</p>
+
+<p>
+  <b>Observation:</b>
+  <%= @pay_sheet.observation %>
+</p>
+
+
+<%= link_to 'Edit', edit_pay_sheet_path(@pay_sheet) %> |
+<%= link_to 'Back', pay_sheets_path %>

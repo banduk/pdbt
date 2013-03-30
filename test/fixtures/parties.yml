@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  event: 
+  flyer: MyString
+  paying_audience: 1
+  gross_profit: 9.99
+  net_profit: 9.99
+
+two:
+  event: 
+  flyer: MyString
+  paying_audience: 1
+  gross_profit: 9.99
+  net_profit: 9.99
